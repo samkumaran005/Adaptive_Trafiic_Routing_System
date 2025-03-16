@@ -44,7 +44,6 @@ int main() {
                 if (n >= 10) { 
                     printf("Maximum number of cities reached.\n"); 
  
-8  
                 } else { 
                     printf("Enter city name: "); 
                     scanf("%s", cities[n].name); 
@@ -93,9 +92,7 @@ int main() {
                         printf("Invalid source city.\n"); 
                         break; 
                     } 
- 
- 
-9  
+  
                     printf("Enter destination city: "); 
                     scanf("%s", destCity); 
                     dest_ind = find_city_ind(cities, n, destCity); 
@@ -145,8 +142,6 @@ int main() {
                         printf("Connection weight updated successfully.\n"); 
                     } 
                 } 
- 
-10  
                 break; 
  
             case 5: 
@@ -196,8 +191,6 @@ void dijkstra(int n, int cost[10][10], int dist[10], int prev[10], int src_ind) 
         // Update distances to unvisited nodes 
         for (i = 0; i < n; i++) { 
             if (!visited[i] && cost[v][i] != INT_MAX && dist[v] + cost[v][i] < dist[i]) { 
- 
-11  
                 dist[i] = dist[v] + cost[v][i]; 
                 prev[i] = v; // Update predecessor 
             } 
